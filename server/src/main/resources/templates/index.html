@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{css/style.css}"/>
+    <title>Search Engine</title>
+</head>
+<body>
+    <div class="container">
+    <!--<form action="#" th:action"@{/search/" method="get">-->
+        <!--<p>Запрос<input type="text" th:field="*{text}"></p>-->
+    <!--</form>-->
+        <div class="grid col-full">
+            <center>
+                <img src="img/logo.png">
+                <form action="#" th:action="@{/}" th:object="${search}" method="post">
+                    <input type="text" th:field="*{text}" />
+                    <input type="submit" name="search" value="Search" size="200">
+                </form>
+            </center>
+        </div>
+    </div>
+</body>
+</html>
